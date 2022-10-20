@@ -28,7 +28,7 @@ option(INFOWARE_USE_OPENCL "Add public, transitive define to infoware to use Ope
 
 option(INFOWARE_USE_X11 "Add public, transitive define to infoware to use X11 for display detection." OFF)
 
-option(INFOWARE_EXAMPLES "Add infoware examples to the build." OFF)
+option(INFOWARE_EXAMPLES "Add infoware examples to the build." ON)
 option(INFOWARE_TESTS    "Input tests for infoware."           OFF)
 
 set(INFOWARE_PCI_IDS_PATH       "${CMAKE_CURRENT_SOURCE_DIR}/pciids/pci.ids"                                   CACHE FILEPATH "pci.ids file to use. Overrides cloning from INFOWARE_PCI_IDS_REPOSITORY.")
@@ -72,9 +72,9 @@ set_target_properties(infoware PROPERTIES CXX_STANDARD 14
                                           CXX_EXTENSIONS OFF
 
                                           PUBLIC_HEADER "${infoware_public_headers}"
-                                          RUNTIME_OUTPUT_DIRECTORY "bin"
-                                          LIBRARY_OUTPUT_DIRECTORY "bin"
-                                          ARCHIVE_OUTPUT_DIRECTORY "lib"
+                                          #RUNTIME_OUTPUT_DIRECTORY "bin"
+                                          #LIBRARY_OUTPUT_DIRECTORY "bin"
+                                          #ARCHIVE_OUTPUT_DIRECTORY "lib"
 
                                           DEBUG_POSTFIX "d"
                                           MINSIZEREL_POSTFIX "msr"
